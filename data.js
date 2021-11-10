@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,21 @@
 		color: 'blue'
 	}
 ];
+
+let main = document.querySelector('main');
+
+// creo un ciclo for
+function icone() {
+	for (let i=0; i<icons.length; i++){
+		main.innerHTML += 
+		`
+		<div class="icons">
+			<div class="icon">
+				<i class="${family} ${prefix} ${name}"></i>
+				<div class="icon-name">${icons[i].name}</div>
+			</div>
+		</div>
+		`
+	}
+}
+icone();
