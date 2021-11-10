@@ -113,17 +113,22 @@ const icons = [
 	}
 ];
 
-let main = document.querySelector('main');
+let main = document.querySelector('.icons');
 
 // creo un ciclo for
 function icone() {
 	for (let i=0; i<icons.length; i++){
+		const family = icons[i].family;
+		const prefix = icons[i].prefix;
+		const name = icons[i].name;
+		const color = icons[i].color;
+
 		main.innerHTML += 
 		`
 		<div class="icons">
 			<div class="icon">
-				<i class="${family} ${prefix} ${name}"></i>
-				<div class="icon-name">${icons[i].name}</div>
+				<i class="${family} ${prefix}${name}" style="color:${color}"></i>
+				<div class="icon-name">${name}</div>
 			</div>
 		</div>
 		`
